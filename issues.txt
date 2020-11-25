@@ -1,0 +1,38 @@
+Issue: Implementare clasa Configuration -- gabi
+
+Issue: Implementare clasa Crawl -- gabi
+
+Issue: Implementare clasa RecursiveScan -- pirjol
+input: String htmlDocumentContent, int depth, String root_directory
+root_directory: stackoverflow.com/questions/54141716/
+
+Issue: Implementare clasa FilterByType -- stanelo 
+crawler list png root_directory/numesite1.ro/
+input: String type, String root_directory, String site_name
+
+Issue: Implementare clasa SearchByKeyword -- stanelo
+crawler search passwd 
+input: String keyword, String root_directory
+
+(?) Issue: Implementare clasa FilterBySize -- pokharel
+input: String root_directory, int maxSize
+output: path-uri fisiere
+
+Issue: Implementare Clasa CLI -- pokharel
+
+Issue: Implementare clasa Logger (scriere in append) -- victor
+(singleton)
+input: int log_type(0,1,2), String message
+0 - INFO, 1 - WARN, 2 - ERR
+
+Issue: Implementare clasa CreateSitemap -- gabi
+input: String root_directory, String site_name
+output: root_directory/sitemap.txt
+
+
+
+
+
+
+
+
