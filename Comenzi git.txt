@@ -1,0 +1,5 @@
+git init
+git clone https://github.com/GabrielStoica/WebCrawler.git
+git remote add origin https://github.com/GabrielStoica/WebCrawler.git
+git pull origin master
+
