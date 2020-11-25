@@ -12,3 +12,4 @@ git push    = uploadeaza commit-ul in repo
 
 git branch issue-1-Implementare-CLI   = creeaza branch nou
 
+git add .    = adauga toate fisierele/ subfolderele din folderul la commit (in git status cele modificate vor aparea cu verde, adica sunt pregatite sa fie incarcate pe server)
