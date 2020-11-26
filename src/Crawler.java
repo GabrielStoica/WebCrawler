@@ -1,19 +1,20 @@
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
-import java.io.IOException;
-
 public class Crawler {
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception {
 
-        System.out.println("Test citire cod sursa HTML al unui site");
+        //crawler crawl config.conf
+        if (args[0].equals("crawl")) {
+            Configuration _config = new Configuration(args[1]);
+            //_config.printConfigurationSettings();
 
-        Document htmlDocument = null;
-        try {
-            htmlDocument = Jsoup.connect("https://mta.ro").get();
-        } catch (IOException e) {
-            e.printStackTrace();
+            Crawl _rootCrawl = new Crawl(_config.getSites_file(), _config);
+            _rootCrawl.createFirstSourceCodeFile();
         }
-        System.out.println(htmlDocument);
+        //crawler sitemap "D:\Path" wiki.mta.ro
+        else if(args[0].equals("sitemap")){
+            GenerateSitemap _sitemap = new GenerateSitemap(args[1], args[2]);
+            _sitemap.generateSitemap();
+        }
+
+
     }
 }
