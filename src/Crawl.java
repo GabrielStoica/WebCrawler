@@ -31,7 +31,7 @@ public class Crawl {
      * fisierului in care sunt stocate pe linii separate URL-urile
      *
      * @param sitesFilename Numele fisierului de intrare
-     * @param config
+     * @param config Obiect de tip Configuration in care s-a facut initializarea variabilelor de configurare
      * @throws FileNotFoundException Eroare returnata atunci cand fisierul nu exista
      */
     public Crawl(String sitesFilename, Configuration config) throws FileNotFoundException {
