@@ -16,7 +16,7 @@
 **git branch** issue-1-Implementare-CLI   = creeaza branch nou\
 
 
-##### ====FETCH/ PULL/ MERGE====
+#### ====FETCH/ PULL/ MERGE====
 
 **git pull = git fetch + git merge**.
 git pull will always merge into the *current branch*
@@ -28,7 +28,7 @@ When you fetch, Git gathers any commits from the target branch that do not exist
 ![uml_secvential](https://i.stack.imgur.com/XwVzT.png)
 
 
-###### **Testare Markdown**
+##### Testare Markdown
 
 Tabel:
 First Header | Second Header
