@@ -1,8 +1,9 @@
 **git init** \
 **git clone** https://github.com/GabrielStoica/WebCrawler.git \
-**git remote add origin** https://github.com/GabrielStoica/WebCrawler.git\
+**git remote add origin** https://github.com/GabrielStoica/WebCrawler.git \
 **git config --global user.email [e_mail]**\
 **git config --global user.name [un_username]**\
+**git branch** [nume_branch]   = creeaza branch nou local \
 **git pull**   = copiaza repository-ul in fisiererle locale\
 **git pull origin [nume_branch]**  = copiaza branch-ul [nume_branch] in branch-ul local selectat (ala albastru)\
 **git checkout [nume_branch]**   = ma mut pe un anumit branch\
@@ -11,9 +12,6 @@
 **git add .**    = adauga toate fisierele/ subfolderele din folderul la commit (in git status cele modificate vor aparea cu verde, adica sunt pregatite sa fie incarcate pe server)\
 **git commit -s**   = pregateste un commit (afiseaza editorul text undde scriu descrierea commit-ului); optiunea *-s* include "semnatura" autorului\
 **git push**    = uploadeaza commit-ul in repo\
-
-
-**git branch** issue-1-Implementare-CLI   = creeaza branch nou\
 
 
 #### ====FETCH/ PULL/ MERGE====
@@ -43,3 +41,6 @@ Task List:
 - [x] @VertUnix, #refs, [@GabrielStoica](https://github.com/GabrielStoica), **formatting**, and <del>tags</del> supported
 - [x] this is a complete item
 - [ ] this is an incomplete item
+
+Link extern:
+[Google](https://www.google.com)
