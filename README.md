@@ -3,13 +3,11 @@
 		width="300"
 		alt="Logo Web Crawler"
 		src="https://i.imgur.com/mKsad8h.png">
-	<p>Web Crawler :globe_with_meridians: </p>
+	<p>Web Crawler</p>
 </h1>
-
 <h3 align="center">
 	A modern web crawler for your pages
 </h3>
-
 <p align="center">
 	<strong>
 		<a href="https://wiki.mta.ro/c/4/ip/lab/tema1-2020">Wiki Requirements</a>
@@ -19,8 +17,6 @@
 		<a href="https://google.com">Demo</a>
 	</strong>
 </p>
-
-
 <p align="center">
 	<a href="https://github.com/GabrielStoica/WebCrawler/tree/master/src"><img
 		alt="Build Status"
@@ -48,10 +44,9 @@ sudo apt-get install web-crawler
 
 ## Utilizare :satellite:
 
-Fișier de configurare:
+Fișier de configurare (*config.conf*):
 
 ```text
-**config.conf**
 n_threads=50
 delay=100ms
 root_dir=D:/Download
@@ -81,7 +76,6 @@ crawler sitemap D:/Download/numesite1.ro
 ```
 
 ## Resurse :books:
------
 
 - [Lots of readme.md examples][1]
 - [Yet another example][2]
