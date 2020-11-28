@@ -40,14 +40,14 @@ Proiectul de față este conceput pentru a răspunde cerințelor Temei 1 din cad
 
 ## Instalare :wrench:
 
-**Linux** Folosind managerul de pachete apt-get
-**Windows** Folosind installer-ul 
+**Linux: ** Folosind managerul de pachete apt-get \
+**Windows: ** Folosind installer-ul 
 
 ```bash
 sudo apt-get install web-crawler
 ```
 
-## Utilizare
+## Utilizare :satellite:
 
 Fișier de configurare:
 
@@ -60,7 +60,9 @@ log_level=3
 depth_level=3
 max_size=500kB
 files_type=all/png/jpg/js/php
+```
 
+Exemplu metodă Java:
 
 ```java
 
@@ -68,14 +70,31 @@ public Crawl(String sitesFilename, Configuration config) throws FileNotFoundExce
         this._sitesFilename = sitesFilename;
         this._config = config;
     }
-
 ```
 
+Exemplu cod Powershell:
 ```powershell
+Copy-Item "C:\Logfiles" -Destination "C:\Drawings\Logs" -Recurse
+
 crawler crawl config.conf sites.txt
 
 crawler sitemap D:/Download/numesite1.ro
 ```
+
+## Resurse
+
+Links :link:
+-----
+
+- [Lots of readme.md examples][1]
+- [Yet another example][2]
+- [Emojis][3]
+- ["Shields" badges][4]
+
+[1]: https://github.com/matiassingers/awesome-readme
+[2]: https://www.makeareadme.com/
+[3]: https://gist.github.com/rxaviers/7360908
+[4]: https://shields.io/
 
 ## License
 [GPL 3.0](https://www.gnu.org/licenses/gpl-3.0.html)
