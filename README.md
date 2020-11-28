@@ -4,6 +4,9 @@
 		alt="Logo Web Crawler"
 		src="https://i.imgur.com/mKsad8h.png">
 </h1>
+<h1 align="center">
+Web Crawler :globe_with_meridians:
+</h1>
 
 <h3 align="center">
 	A modern web crawler for your pages
@@ -21,18 +24,16 @@
 
 
 <p align="center">
-	
-	<a href="https://github.com/thelounge/thelounge/actions"><img
+	<a href="https://github.com/GabrielStoica/WebCrawler/tree/master/src"><img
 		alt="Build Status"
 		src="https://github.com/thelounge/thelounge/workflows/Build/badge.svg"></a>
-	<a href="https://npm-stat.com/charts.html?package=thelounge&from=2016-02-12"><img
+	<a href="https://github.com/GabrielStoica/WebCrawler"><img
 		alt="Progress status"
 		src="https://img.shields.io/badge/Progress-under%20construction-yellow"></a>
-		
 </p>
 
 
-# Web Crawler :globe_with_meridians:
+## Descriere :page_facing_up:
 
 Un crawler web sau spider descarcă și indexează conținutul de pe paginile web disponibile într-o rețea precum Internetul. De cele mai multe ori un crawler web este operat de un motor de căutare și aplică un algoritm de colectare a datelor. Ulterior, prin aplicarea unor algoritmi de căutare în baza de date astfel construită, motoarele returnează utilizatorilor rezultate relevante pentru cuvintele-cheie introduse. 
  
@@ -40,8 +41,8 @@ Proiectul de față este conceput pentru a răspunde cerințelor Temei 1 din cad
 
 ## Instalare :wrench:
 
-**Linux: ** Folosind managerul de pachete apt-get \
-**Windows: ** Folosind installer-ul 
+**Linux** Folosind managerul de pachete apt-get \
+**Windows** Folosind installer-ul 
 
 ```bash
 sudo apt-get install web-crawler
@@ -52,7 +53,7 @@ sudo apt-get install web-crawler
 Fișier de configurare:
 
 ```text
-config.conf:
+**config.conf**
 n_threads=50
 delay=100ms
 root_dir=D:/Download
@@ -81,9 +82,7 @@ crawler crawl config.conf sites.txt
 crawler sitemap D:/Download/numesite1.ro
 ```
 
-## Resurse
-
-Links :link:
+## Resurse :books:
 -----
 
 - [Lots of readme.md examples][1]
