@@ -3,9 +3,7 @@
 		width="300"
 		alt="Logo Web Crawler"
 		src="https://i.imgur.com/mKsad8h.png">
-</h1>
-<h1 align="center">
-Web Crawler :globe_with_meridians:
+	<p>Web Crawler :globe_with_meridians: </p>
 </h1>
 
 <h3 align="center">
