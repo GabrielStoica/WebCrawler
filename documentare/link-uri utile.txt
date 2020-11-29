@@ -1,0 +1,4 @@
+Cum documentezi codul folosind JavaDoc:
+https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html#tag
+https://www.tutorialspoint.com/java/java_documentation.htm
+https://openwritings.net/pg/java/writing-javadoc-examples
