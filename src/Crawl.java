@@ -106,6 +106,13 @@ public class Crawl {
         }
     }
 
+    /**
+     * Functie responsabila cu descarcarea continutului de la adredsa urlString
+     *
+     * @param urlString URL-ul catre adresa resursei ce urmeaza a fi descarcata
+     * @return returneaza un obiect de tipul BufferedReader, reprezentand continutul resursei
+     * @throws IOException Exceptie atunci resursa respectiva nu exista la adresa urlString
+     */
     public BufferedReader downloadResource(String urlString) throws IOException {
         URL url = new URL(urlString);
         BufferedReader reader = null;
