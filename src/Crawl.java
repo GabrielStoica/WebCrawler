@@ -2,17 +2,15 @@ import org.jsoup.Jsoup;
 import org.jsoup.internal.StringUtil;
 import org.jsoup.nodes.Document;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
+import java.net.URL;
 import java.util.Scanner;
 
 /**
  * Creaza structura arborescenta plecand de la URL-urile din fisierul de intrare
  * Primeste ca parametru de initializare numele fisierului in care sunt scrise
  * pe linii separate URL-urile ce vor fi reprezenta root-ul crawler-ului
- *
+ * <p>
  * Exemplu de fisier de intrare:
  * https://mta.ro
  * https://wiki.mta.ro/
@@ -31,7 +29,7 @@ public class Crawl {
      * fisierului in care sunt stocate pe linii separate URL-urile
      *
      * @param sitesFilename Numele fisierului de intrare
-     * @param config
+     * @param config        Obiect de tip Configuration in care s-a facut initializarea variabilelor de configurare
      * @throws FileNotFoundException Eroare returnata atunci cand fisierul nu exista
      */
     public Crawl(String sitesFilename, Configuration config) throws FileNotFoundException {
@@ -50,12 +48,14 @@ public class Crawl {
 
         File sitesFile = new File(_sitesFilename);
         Scanner scan = new Scanner(sitesFile);
+
         String _siteURL;
         String fullDirectory;
+        String resource = null;
 
         int numberOfURLs = 0;
         while (scan.hasNextLine()) {
-            numberOfURLs ++;
+            numberOfURLs++;
             _siteURL = scan.nextLine();
             fullDirectory = _siteURL.split("//")[1];
             int occurenceOfSlash = 0;
@@ -73,9 +73,7 @@ public class Crawl {
                 if (!directory.exists()) {
                     directory.mkdirs();
                 }
-                Document htmlDocument = Jsoup.connect(_siteURL).get();
-                PrintWriter createHtmlDocument = new PrintWriter("sitemaps/" + rootDirectory + "/index.html");
-                createHtmlDocument.println(htmlDocument);
+                resource = "sitemaps/" + rootDirectory + "/index.html";
             }
             //de forma wiki.mta.ro/company sau wiki.mta.ro/company/
             // sau wiki.mta.ro/company/pagina1 sau wiki.mta.ro/company/pagina1/
@@ -90,16 +88,36 @@ public class Crawl {
                     directory.mkdirs();
                 }
                 //System.out.println(rootDirectory);
-                Document htmlDocument = Jsoup.connect(_siteURL).get();
-                PrintWriter createHtmlDocument = new PrintWriter("sitemaps/" + rootDirectory + "/" + lastSourceCodeFilename + ".html");
-                createHtmlDocument.println(htmlDocument);
+                resource = "sitemaps/" + rootDirectory + "/" + lastSourceCodeFilename + ".html";
+
+            }
+
+            BufferedReader htmlDocument = downloadResource(_siteURL);
+            BufferedWriter writer = new BufferedWriter(new FileWriter(resource));
+            String line;
+            while ((line = htmlDocument.readLine()) != null) {
+                writer.write(line);
             }
 
         }
 
-        if(numberOfURLs==0){
+        if (numberOfURLs == 0) {
             throw new Exception("Fisierul de intrare cu URL-uri este gol!");
         }
     }
 
+    public BufferedReader downloadResource(String urlString) throws IOException {
+        URL url = new URL(urlString);
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader(new InputStreamReader(url.openStream()));
+        } catch (IOException e) {
+            //de logat in fisier
+            e.printStackTrace();
+        }
+        //System.out.println("Page downloaded.");
+        return reader;
+    }
 }
+
+
