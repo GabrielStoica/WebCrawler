@@ -1,18 +1,50 @@
+import javax.naming.ConfigurationException;
+import java.io.IOException;
+
+/**
+ * Clasa ce contine metoda main() si care determina workflow-ul intregii aplicatii prin
+ * apeluri ale metodelor din celelalte clasele.
+ * @author Stoica Gabriel
+ * @author VertUnix
+ * @version v0.2
+ *
+ */
 public class Crawler {
-    public static void main(String[] args) throws Exception {
+    /*You only throw an exception if you want it to be handled by a "higher" function.
+     * => am eliminat throw-ul din main pt ca o sa tratam orice exceptie folosind try-catch*/
 
-        //crawler crawl config.conf
-        if (args[0].equals("crawl")) {
-            Configuration _config = new Configuration(args[1]);
-            //_config.printConfigurationSettings();
+    /**
+     * Metoda main() in care apelez principalele metode ale programului.
+     *
+     * @param args contine comanda primita de la utilizator ce urmeaza a fi interpretata
+     */
+    public static void main(String[] args) {
 
-            Crawl _rootCrawl = new Crawl(_config.getSites_file(), _config);
-            _rootCrawl.createFirstSourceCodeFile();
+        try {
+            CLI cli = new CLI();
+            cli.readInput(args);
+
+
+        } catch (IOException e)
+        {
+            System.out.println("Eroare de input/ output. " + e.getMessage());
+
+            /* System.exit() - Terminates the currently running Java Virtual Machine. The argument serves
+            as a status code; by convention, a nonzero status code indicates abnormal termination. */
+            System.exit(-1);
         }
-        //crawler sitemap "D:\Path" wiki.mta.ro
-        else if(args[0].equals("sitemap")){
-            GenerateSitemap _sitemap = new GenerateSitemap(args[1], args[2]);
-            _sitemap.generateSitemap();
+        catch (ConfigurationException e)
+        {
+            {
+                System.out.println("Eroare la configurare. " + e.getMessage());
+                System.exit(-1);
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("Eroare generica. " + e.getMessage());
+            //prinde o exceptie generica
+            System.exit(-1);
         }
 
 
