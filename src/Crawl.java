@@ -7,7 +7,7 @@ import java.net.URL;
 import java.util.Scanner;
 
 /**
- * Creaza structura arborescenta plecand de la URL-urile din fisierul de intrare
+ * Creeaza structura arborescenta plecand de la URL-urile din fisierul de intrare
  * Primeste ca parametru de initializare numele fisierului in care sunt scrise
  * pe linii separate URL-urile ce vor fi reprezenta root-ul crawler-ului
  * <p>
