@@ -60,6 +60,11 @@ public class CLI {
                 System.out.println(data);
             }
         }
+        //crawler list sitemaps extensie
+        else if(args[0].equals("list")){
+            List extension = new List(args[1],args[2]);
+            extension.print();
+        }
         //eroare comanda
         else {
             System.out.println("Comanda inexistenta. Verificati scrierea sau consultati meniul \"crawler --help\"");
