@@ -1,7 +1,3 @@
-import org.jsoup.Jsoup;
-import org.jsoup.internal.StringUtil;
-import org.jsoup.nodes.Document;
-
 import java.io.*;
 import java.net.URL;
 import java.util.Scanner;
