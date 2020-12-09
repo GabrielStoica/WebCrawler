@@ -65,6 +65,11 @@ public class CLI {
             List extension = new List(args[1],args[2]);
             extension.print();
         }
+        //crawler search sitemaps index
+        else if(args[0].equals("search")){
+            Search search = new Search(args[1],args[2]);
+            search.print();
+        }
         //eroare comanda
         else {
             System.out.println("Comanda inexistenta. Verificati scrierea sau consultati meniul \"crawler --help\"");
