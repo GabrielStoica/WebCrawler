@@ -103,6 +103,7 @@ public class GenerateSitemap {
             createSitemapFile(this._sitemap);
 
         } else {
+            Logger.getInstance().sendDataToLogger(3,"Directory: " + mainPathDirectory + " does not exist!");
             throw new FileNotFoundException("Folderul specificat nu exista!");
         }
 
