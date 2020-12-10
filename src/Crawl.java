@@ -98,6 +98,7 @@ public class Crawl {
         }
 
         if (numberOfURLs == 0) {
+            Logger.getInstance().sendDataToLogger(2,"Input sites.txt file is empty! No resource will be downloaded!");
             throw new Exception("Fisierul de intrare cu URL-uri este gol!");
         }
     }
@@ -116,10 +117,10 @@ public class Crawl {
         try {
             reader = new BufferedReader(new InputStreamReader(url.openStream()));
         } catch (IOException e) {
-            //de logat in fisier
+            Logger.getInstance().sendDataToLogger(3,"Page: " + urlString + " not found (404)");
             e.printStackTrace();
         }
-        //System.out.println("Page downloaded.");
+        Logger.getInstance().sendDataToLogger(1,"Resource downloading from: " + urlString);
         return reader;
     }
 }

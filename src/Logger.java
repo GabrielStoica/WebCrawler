@@ -25,10 +25,10 @@ public class Logger {
     public void sendDataToLogger(int log_id, String messageToLog)
     {
         try {
-            FileWriter myWriter = new FileWriter("Logger.txt");
+            FileWriter myWriter = new FileWriter("Logger.txt", true);
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("[HH:mm:ss - dd/MM/yyyy]");
             LocalDateTime now = LocalDateTime.now();
-            myWriter.write(dtf.format(now));
+            myWriter.write("[ " + dtf.format(now) + " ]");
             if (log_id == 1) {
                 myWriter.write(" INFO: ");
             } else if (log_id == 2) {
@@ -37,6 +37,7 @@ public class Logger {
                 myWriter.write(" ERROR: ");
             }
             myWriter.write(messageToLog);
+            myWriter.write("\n");
             myWriter.close();
         }
         catch(IOException e)
