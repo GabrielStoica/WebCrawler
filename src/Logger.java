@@ -5,7 +5,8 @@ import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 
 public class Logger {
-    public Logger() {
+    private static Logger logger = new Logger();
+    private Logger() {
         File file;
         file = new File("Logger.txt");
         if(!file.exists())
@@ -17,6 +18,9 @@ public class Logger {
                 e.printStackTrace();
             }
         }
+    }
+    public static Logger getInstance( ) {
+        return logger;
     }
     public void sendDataToLogger(int log_id, String messageToLog)
     {
@@ -42,5 +46,3 @@ public class Logger {
         }
     }
 }
-
-//test
