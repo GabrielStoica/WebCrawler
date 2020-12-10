@@ -2,6 +2,8 @@ import java.io.*;
 import java.net.URL;
 import java.util.Scanner;
 
+import static java.lang.Thread.sleep;
+
 /**
  * Creeaza structura arborescenta plecand de la URL-urile din fisierul de intrare
  * Primeste ca parametru de initializare numele fisierului in care sunt scrise
@@ -94,10 +96,12 @@ public class Crawl {
             while ((line = htmlDocument.readLine()) != null) {
                 writer.write(line);
             }
-
+            //astept delay time pentru a descarca urmatoarea resursa
+            sleep(_config.getDelay());
         }
 
         if (numberOfURLs == 0) {
+            Logger.getInstance().sendDataToLogger(2,"Input sites.txt file is empty! No resource will be downloaded!");
             throw new Exception("Fisierul de intrare cu URL-uri este gol!");
         }
     }
@@ -116,10 +120,10 @@ public class Crawl {
         try {
             reader = new BufferedReader(new InputStreamReader(url.openStream()));
         } catch (IOException e) {
-            //de logat in fisier
+            Logger.getInstance().sendDataToLogger(3,"Page: " + urlString + " not found (404)");
             e.printStackTrace();
         }
-        //System.out.println("Page downloaded.");
+        Logger.getInstance().sendDataToLogger(1,"Resource downloading from: " + urlString);
         return reader;
     }
 }
