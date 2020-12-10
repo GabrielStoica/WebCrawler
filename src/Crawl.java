@@ -2,6 +2,8 @@ import java.io.*;
 import java.net.URL;
 import java.util.Scanner;
 
+import static java.lang.Thread.sleep;
+
 /**
  * Creeaza structura arborescenta plecand de la URL-urile din fisierul de intrare
  * Primeste ca parametru de initializare numele fisierului in care sunt scrise
@@ -94,7 +96,8 @@ public class Crawl {
             while ((line = htmlDocument.readLine()) != null) {
                 writer.write(line);
             }
-
+            //astept delay time pentru a descarca urmatoarea resursa
+            sleep(_config.getDelay());
         }
 
         if (numberOfURLs == 0) {
