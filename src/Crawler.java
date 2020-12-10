@@ -21,7 +21,7 @@ public class Crawler {
     public static void main(String[] args) {
 
         try {
-            CLI cli = new CLI();
+            CLI cli = CLI.getInstance();
             cli.readInput(args);
 
 
