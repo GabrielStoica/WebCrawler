@@ -5,11 +5,10 @@ OPȚIUNI
 	-c, --crawl	<config.conf> <SITES_FILE>			
 						funcția de bază; descarcă recursiv paginile specificate în 
 						SITES_FILE conform opțiunilor din CONFIG_FILE; vezi mai jos
-						formatul celor 2 fișiere		
-	-s, --sitemap <ROOT_DIR> <SITE_NAME>	
-						creează un fișier "sitemap.txt" pentru site-ul specificat,
+						formatul celor 2 fișiere	
+	-s, --sitemap <ROOT_DIR> <SITE_NAME>	creează un fișier "sitemap.txt" pentru site-ul specificat,
 						deja descărcat în folderul părinte ROOT_DIR; SITE_NAME este
-						numele folderului al carui sitemap se doreste a se obtine 		
+						numele folderului al carui sitemap se doreste a se obtine 
 	-e, --search <FOLDER_TO_SEARCH> <KEYWORD>
 						caută recursiv în FOLDER_TO_SEARCH și afișează toate 
 						path-urile către fișierele al căror nume conține KEYWORD
