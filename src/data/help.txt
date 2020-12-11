@@ -14,7 +14,7 @@ OPȚIUNI
 	-l, --list <FOLDER_TO_SEARCH> <EXTENSION>
 						caută recursiv în FOLDER_TO_SEARCH și afișează toate 
 						path-urile către fișierele cu extensia EXTENSION
-	--help, -?			afișează acest meniu de ajutor
+	-?, --help				afișează acest meniu de ajutor
 	
 	
 SITES_FILE are formatul:
