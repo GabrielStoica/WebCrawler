@@ -2,8 +2,7 @@ Utilitarul Web Crawler descarcă recursiv paginile din Internet, găsește rezul
 
 OPȚIUNI       
 
-	-c, --crawl	<config.conf> <SITES_FILE>			
-						funcția de bază; descarcă recursiv paginile specificate în 
+	-c, --crawl <config.conf> <SITES_FILE>	funcția de bază; descarcă recursiv paginile specificate în 
 						SITES_FILE conform opțiunilor din CONFIG_FILE; vezi mai jos
 						formatul celor 2 fișiere	
 	-s, --sitemap <ROOT_DIR> <SITE_NAME>	creează un fișier "sitemap.txt" pentru site-ul specificat,
