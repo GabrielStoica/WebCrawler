@@ -8,7 +8,7 @@ public class Logger {
     private static Logger logger = new Logger();
     private Logger() {
         File file;
-        file = new File("Logger.txt");
+        file = new File("log.txt");
         if(!file.exists())
         {
             try {
@@ -25,7 +25,7 @@ public class Logger {
     public void sendDataToLogger(int log_id, String messageToLog)
     {
         try {
-            FileWriter myWriter = new FileWriter("Logger.txt", true);
+            FileWriter myWriter = new FileWriter("log.txt", true);
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("[HH:mm:ss - dd/MM/yyyy]");
             LocalDateTime now = LocalDateTime.now();
             myWriter.write("[ " + dtf.format(now) + " ]");
