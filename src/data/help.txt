@@ -2,35 +2,47 @@ Utilitarul Web Crawler descarcă recursiv paginile din Internet, găsește rezul
 
 OPȚIUNI       
 
-	-c, --crawl <config.conf> <SITES_FILE>	funcția de bază; descarcă recursiv paginile specificate în 
-						SITES_FILE conform opțiunilor din CONFIG_FILE; vezi mai jos
-						formatul celor 2 fișiere	
-	-s, --sitemap <ROOT_DIR> <SITE_NAME>	creează un fișier "sitemap.txt" pentru site-ul specificat,
-						deja descărcat în folderul părinte ROOT_DIR; SITE_NAME este
-						numele folderului al carui sitemap se doreste a se obtine 
+	-c, --crawl <config.conf>	funcția de bază; descarcă recursiv paginile specificate în 
+								<SITES_FILE> conform opțiunilor din CONFIG_FILE; vezi mai jos
+								formatul celor 2 fișiere	
+	-s, --sitemap <ROOT_DIR> <SITE_NAME>	
+								creează un fișier "sitemap.txt" pentru site-ul specificat,
+								deja descărcat în folderul părinte ROOT_DIR; SITE_NAME este
+								numele folderului al carui sitemap se doreste a se obtine 
 	-e, --search <FOLDER_TO_SEARCH> <KEYWORD>
-						caută recursiv în FOLDER_TO_SEARCH și afișează toate 
-						path-urile către fișierele al căror nume conține KEYWORD
+								caută recursiv în FOLDER_TO_SEARCH și afișează toate 
+								path-urile către fișierele al căror nume conține KEYWORD
 	-l, --list <FOLDER_TO_SEARCH> <EXTENSION>
-						caută recursiv în FOLDER_TO_SEARCH și afișează toate 
-						path-urile către fișierele cu extensia EXTENSION
-	-?, --help				afișează acest meniu de ajutor
+								caută recursiv în FOLDER_TO_SEARCH și afișează toate 
+								path-urile către fișierele cu extensia EXTENSION
+	-?, --help					afișează acest meniu de ajutor
 	
+	
+
+		
+CONFIG_FILE trebuie să conțină toate câmpurile de mai jos, fiecare pe o linie nouă și are formatul:
+		n_threads=50
+		delay=<time_in_miliseconds>
+		root_dir=<download_file_location>
+		log_level=3
+		depth_level=3
+		max_size=<ByteSizeLimit>
+		files_type=all
+		sites_file=<SITES_FILE>
+		
+	n_threads					specifică nr. maxim de threaduri care vor descărca simultan 
+								paginile specificate
+	delay						timpul maxim de așteptare pentru descărcarea unei pagini
+	log_level					nivelul maxim în arborele de descărcări recursive până la
+								care se vor loga evenimentele
+	depth_level					nivelul maxim până la care se vor descărca recursiv paginile
+	max_size (în octeți)		dimensiunea maximă admisă pentru o pagină descărcată, în octeți;
+								fișierele mai mari vor fi ignorate
 	
 SITES_FILE are formatul:
 		https://numesite1.ro/index.html
 		https://numesite2.ro
 		https://wiki.numesite2.ro/
 		https://stackoverflow.com/company/about-us
-		
-CONFIG_FILE trebuie să conțină toate câmpurile de mai jos, fiecare pe o linie nouă și are formatul:
-		n_threads=50
-		delay=100ms
-		root_dir=D:/Download
-		log_level=3
-		depth_level=3
-		max_size=500kB
-		files_type=all/png/jpg/js/php
-
 
 În fișierul "log.txt" sunt jurnalizate evenimentele de eroare, atenționare și informare. 

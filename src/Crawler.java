@@ -6,7 +6,7 @@ import java.io.IOException;
  * apeluri ale metodelor din celelalte clasele.
  * @author Stoica Gabriel
  * @author VertUnix
- * @version v0.2
+ * @version v0.5
  *
  */
 public class Crawler {
@@ -24,26 +24,23 @@ public class Crawler {
             CLI cli = CLI.getInstance();
             cli.readInput(args);
 
-
+            //Test a = new Test();
+            //a.downloadSite();
         } catch (IOException e)
         {
             System.out.println("Eroare de input/ output. " + e.getMessage());
-
-            /* System.exit() - Terminates the currently running Java Virtual Machine. The argument serves
-            as a status code; by convention, a nonzero status code indicates abnormal termination. */
+            Logger.getInstance().sendDataToLogger(3,"Eroare de input/ output. " + e.getMessage());
             System.exit(-1);
-        }
-        catch (ConfigurationException e)
+        } catch (ConfigurationException e)
         {
-            {
                 System.out.println("Eroare la configurare. " + e.getMessage());
+                Logger.getInstance().sendDataToLogger(3,"Eroare la configurare. " + e.getMessage());
                 System.exit(-1);
-            }
-        }
-        catch (Exception e)
+        } catch (Exception e)
         {
-            System.out.println("Eroare generica. " + e.getMessage());
             //prinde o exceptie generica
+            System.out.println("Eroare generica. " + e.getMessage());
+            Logger.getInstance().sendDataToLogger(3,"Eroare generica. " + e.getMessage());
             System.exit(-1);
         }
 

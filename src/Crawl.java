@@ -36,7 +36,7 @@ public class Crawl {
     }
 
     /**
-     * Creaza structura arborescenta, stocand paginile HTML
+     * Creeaza structura arborescenta, stocand paginile HTML
      * in directoarele corespunzatoare, in functie de link-urile URL din
      * fisierul de intrare
      *
@@ -52,6 +52,8 @@ public class Crawl {
         String resource = null;
 
         int numberOfURLs = 0;
+        if(scan.hasNextLine())
+            System.out.println("Downloading resources...");
         while (scan.hasNextLine()) {
             numberOfURLs++;
             _siteURL = scan.nextLine();
@@ -90,14 +92,17 @@ public class Crawl {
 
             }
 
+
             BufferedReader htmlDocument = downloadResource(_siteURL);
-            BufferedWriter writer = new BufferedWriter(new FileWriter(resource));
-            String line;
-            while ((line = htmlDocument.readLine()) != null) {
-                writer.write(line);
+            if(SizeLimiter.isWithinSizeLimit(_config.getMax_size(), _siteURL, true)) {
+                BufferedWriter writer = new BufferedWriter(new FileWriter(resource));
+                String line;
+                while ((line = htmlDocument.readLine()) != null) {
+                    writer.write(line);
+                }
+                //astept delay time pentru a descarca urmatoarea resursa
+                sleep(_config.getDelay());
             }
-            //astept delay time pentru a descarca urmatoarea resursa
-            sleep(_config.getDelay());
         }
 
         if (numberOfURLs == 0) {
