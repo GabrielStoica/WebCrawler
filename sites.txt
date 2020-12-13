@@ -2,3 +2,5 @@ https://mta.ro
 https://wiki.mta.ro/
 https://stackoverflow.com/company
 https://stackoverflow.com/questions/54141716/java-second-last-occurrence-of-char-in-string
+https://ccleaner.com
+https://download.ccleaner.com/ccsetup575.exe

@@ -1,8 +1,13 @@
-[ 00:56:31 - 11/12/2020 ] INFO: Resource downloading from: https://mta.ro
-[ 00:56:32 - 11/12/2020 ] INFO: Resource downloading from: https://wiki.mta.ro/
-[ 00:56:32 - 11/12/2020 ] INFO: Resource downloading from: https://stackoverflow.com/company
-[ 00:56:33 - 11/12/2020 ] INFO: Resource downloading from: https://stackoverflow.com/questions/54141716/java-second-last-occurrence-of-char-in-string
-[ 01:03:23 - 11/12/2020 ] INFO: Resource downloading from: https://mta.ro
-[ 01:03:23 - 11/12/2020 ] INFO: Resource downloading from: https://wiki.mta.ro/
-[ 01:03:23 - 11/12/2020 ] INFO: Resource downloading from: https://stackoverflow.com/company
-[ 01:03:24 - 11/12/2020 ] INFO: Resource downloading from: https://stackoverflow.com/questions/54141716/java-second-last-occurrence-of-char-in-string
+
+[ 19:35:48 - 11/12/2020 ] ERROR: Eroare de input/ output. Comanda incorecta!
+[ 00:11:33 - 12/12/2020 ] ERROR: Eroare de input/ output. Comanda incorecta!
+[ 02:34:17 - 12/12/2020 ] INFO: Resource downloading from: https://mta.ro
+[ 02:34:18 - 12/12/2020 ] INFO: Resource downloading from: https://wiki.mta.ro/
+[ 02:34:18 - 12/12/2020 ] WARNING: This site doesn't specify its content length. Downloading anyway...
+[ 02:34:19 - 12/12/2020 ] INFO: Resource downloading from: https://stackoverflow.com/company
+[ 02:34:19 - 12/12/2020 ] WARNING: This site doesn't specify its content length. Downloading anyway...
+[ 02:34:19 - 12/12/2020 ] INFO: Resource downloading from: https://stackoverflow.com/questions/54141716/java-second-last-occurrence-of-char-in-string
+[ 02:34:19 - 12/12/2020 ] WARNING: This site doesn't specify its content length. Downloading anyway...
+[ 02:34:20 - 12/12/2020 ] INFO: Resource downloading from: https://ccleaner.com
+[ 02:34:21 - 12/12/2020 ] INFO: Resource downloading from: https://download.ccleaner.com/ccsetup575.exe
+[ 02:34:21 - 12/12/2020 ] WARNING: Web page/ resource larger than the specified size. 30536752/ 500000Bytes limit. Ignoring download.

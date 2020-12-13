@@ -5,6 +5,8 @@ import java.io.FileReader;
 import java.io.LineNumberReader;
 import java.util.Scanner;
 
+import static java.lang.Integer.parseInt;
+
 /**
  * Initializeaza variabilele de configurare necesare pe tot parcursul rularii utilitarului.
  * Primeste ca parametru fisierul de configurare de forma:
@@ -57,15 +59,15 @@ public class Configuration {
             _linesCount++;
             line_buffer = scan.nextLine();
             if (line_buffer.contains("n_threads")) {
-                this.n_threads = Integer.parseInt(line_buffer.split("=")[1]);
+                this.n_threads = parseInt(line_buffer.split("=")[1]);
             } else if (line_buffer.contains("delay")) {
-                this.delay = Integer.parseInt(line_buffer.split("=")[1]);
+                this.delay = parseInt(line_buffer.split("=")[1]);
             } else if (line_buffer.contains("root_dir")) {
                 this.root_dir = line_buffer.split("=")[1];
             } else if (line_buffer.contains("log_level")) {
-                this.log_level = Integer.parseInt(line_buffer.split("=")[1]);
+                this.log_level = parseInt(line_buffer.split("=")[1]);
             } else if (line_buffer.contains("depth_level")) {
-                this.depth_level = Integer.parseInt(line_buffer.split("=")[1]);
+                this.depth_level = parseInt(line_buffer.split("=")[1]);
             } else if (line_buffer.contains("max_size")) {
                 this.max_size = line_buffer.split("=")[1];
             } else if (line_buffer.contains("files_type")) {
@@ -108,8 +110,8 @@ public class Configuration {
         return depth_level;
     }
 
-    public String getMax_size() {
-        return max_size;
+    public long getMax_size() {
+        return Long.parseLong(max_size);
     }
 
     public String getFiles_type() {
