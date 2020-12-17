@@ -1,0 +1,16 @@
+[ 21:47:04 - 10/12/2020 ] INFO: Resource downloading from: https://mta.ro
+[ 21:47:05 - 10/12/2020 ] INFO: Resource downloading from: https://wiki.mta.ro/
+[ 21:47:05 - 10/12/2020 ] INFO: Resource downloading from: https://stackoverflow.com/company
+[ 21:47:06 - 10/12/2020 ] INFO: Resource downloading from: https://stackoverflow.com/questions/54141716/java-second-last-occurrence-of-char-in-string
+[ 22:06:17 - 10/12/2020 ] INFO: Resource downloading from: https://mta.ro
+[ 22:06:17 - 10/12/2020 ] INFO: Resource downloading from: https://wiki.mta.ro/
+[ 22:06:17 - 10/12/2020 ] INFO: Resource downloading from: https://stackoverflow.com/company
+[ 22:06:18 - 10/12/2020 ] INFO: Resource downloading from: https://stackoverflow.com/questions/54141716/java-second-last-occurrence-of-char-in-string
+[ 22:07:31 - 10/12/2020 ] INFO: Resource downloading from: https://mta.ro
+[ 22:07:31 - 10/12/2020 ] INFO: Resource downloading from: https://wiki.mta.ro/
+[ 22:07:32 - 10/12/2020 ] INFO: Resource downloading from: https://stackoverflow.com/company
+[ 22:07:32 - 10/12/2020 ] INFO: Resource downloading from: https://stackoverflow.com/questions/54141716/java-second-last-occurrence-of-char-in-string
+[ 16:07:41 - 16/12/2020 ] INFO: Resource downloading from: https://mta.ro
+[ 16:07:41 - 16/12/2020 ] INFO: Resource downloading from: https://wiki.mta.ro/
+[ 16:07:42 - 16/12/2020 ] INFO: Resource downloading from: https://stackoverflow.com/company
+[ 16:07:43 - 16/12/2020 ] INFO: Resource downloading from: https://stackoverflow.com/questions/54141716/java-second-last-occurrence-of-char-in-string
