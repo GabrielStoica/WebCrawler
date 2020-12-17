@@ -56,8 +56,15 @@ public class CLI {
             Configuration _config = new Configuration(args[1]);
             //_config.printConfigurationSettings();
 
-            Crawl _rootCrawl = new Crawl(_config.getSites_file(), _config);
-            _rootCrawl.createFirstSourceCodeFile();
+            /*Crawl _rootCrawl = new Crawl(_config.getSites_file(), _config);
+            _rootCrawl.createFirstSourceCodeFile();*/
+            RecursiveScan.init(_config.getSites_file());
+            for(String SourceURL: RecursiveScan.getSourceURLs())
+            {
+                RecursiveScan recScanObj=new RecursiveScan(SourceURL, _config.getRoot_dir(), _config.getDepth_level());
+                recScanObj.start();
+            }
+
         }
         //crawler sitemap "D:\Path" wiki.mta.ro
         else if(args[0].equals("-s") || args[0].contains("sitemap")){

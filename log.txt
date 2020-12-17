@@ -11,3 +11,16 @@
 [ 02:34:20 - 12/12/2020 ] INFO: Resource downloading from: https://ccleaner.com
 [ 02:34:21 - 12/12/2020 ] INFO: Resource downloading from: https://download.ccleaner.com/ccsetup575.exe
 [ 02:34:21 - 12/12/2020 ] WARNING: Web page/ resource larger than the specified size. 30536752/ 500000Bytes limit. Ignoring download.
+[ 13:36:28 - 17/12/2020 ] INFO: Resource downloading from: https://mta.ro
+[ 13:37:43 - 17/12/2020 ] INFO: Resource downloading from: https://wiki.mta.ro/
+[ 13:37:44 - 17/12/2020 ] WARNING: This site doesn't specify its content length. Downloading anyway...
+[ 13:38:01 - 17/12/2020 ] INFO: Resource downloading from: https://stackoverflow.com/company
+[ 13:38:02 - 17/12/2020 ] WARNING: This site doesn't specify its content length. Downloading anyway...
+[ 13:38:03 - 17/12/2020 ] INFO: Resource downloading from: https://stackoverflow.com/questions/54141716/java-second-last-occurrence-of-char-in-string
+[ 13:38:04 - 17/12/2020 ] WARNING: This site doesn't specify its content length. Downloading anyway...
+[ 13:38:07 - 17/12/2020 ] INFO: Resource downloading from: https://ccleaner.com
+[ 13:38:10 - 17/12/2020 ] INFO: Resource downloading from: https://download.ccleaner.com/ccsetup575.exe
+[ 13:38:11 - 17/12/2020 ] WARNING: Web page/ resource larger than the specified size. 30536752/ 500000Bytes limit. Ignoring download.
+[ 15:31:12 - 17/12/2020 ] ERROR: Eroare generica. Cannot invoke "java.lang.CharSequence.length()" because "this.text" is null
+[ 15:32:32 - 17/12/2020 ] ERROR: Eroare generica. Cannot invoke "java.lang.CharSequence.length()" because "this.text" is null
+[ 15:45:55 - 17/12/2020 ] ERROR: Eroare generica. Cannot invoke "java.lang.CharSequence.length()" because "this.text" is null
