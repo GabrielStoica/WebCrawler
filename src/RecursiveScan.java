@@ -27,8 +27,10 @@ public class RecursiveScan {
             RecursiveScan.sourceURLs=new ArrayList<String>();
         }
         File sites = new File(sitesFileName);
-        if(sites==null)
+        if(sites==null) {
+            Logger.getInstance().sendDataToLogger(3, "Eroare la deschiderea fisierului initial cu linkuri!(fisier inexsitent)");
             throw new IOException();
+        }
         Scanner reader=new Scanner(sites);
         while(reader.hasNext())
         {
@@ -37,8 +39,10 @@ public class RecursiveScan {
     }
 
     public void start() throws Exception {
-        if(this.SourcePath == null || this.Depth<=0)
+        if(this.SourcePath == null || this.Depth<=0) {
+            Logger.getInstance().sendDataToLogger(3, "Wrong start parameters!");
             throw new Exception("Wrong start parameters!");
+        }
                 String FilePath=new String(SourcePath);
                 String FileToDownload=RecursiveScan.StripLink(this.UrlSource);
                 FileToDownload=RecursiveScan.GetFileName(FileToDownload);
@@ -66,6 +70,7 @@ public class RecursiveScan {
         byte[] buffer = new byte[1024];
         len = in.read(buffer);
         if (len == -1) {
+            Logger.getInstance().sendDataToLogger(3, "Couldn`t download web page!");
             throw new IOException("Couldn't download specified!");
         } else
             fos.write(buffer, 0, len);
@@ -121,7 +126,8 @@ public class RecursiveScan {
         }
         else
         {
-            System.out.println("Error in providing Source Url!");
+            //System.out.println("Error in providing Source Url!");
+            Logger.getInstance().sendDataToLogger(3, "Error in providing source URL");
             throw new Exception("Error in providing Source Url!");
         }
         if(SourcePath!=null)
@@ -270,7 +276,7 @@ public class RecursiveScan {
                     error=1;
                 }
             } catch (IOException e) {
-                System.out.println("Error in downloading " + link + " coz " + e);
+                //System.out.println("Error in downloading " + link + " coz " + e);
                 Logger.getInstance().sendDataToLogger(3, e.getMessage());
                 error=1;
             }
