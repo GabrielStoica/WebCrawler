@@ -56,6 +56,7 @@ public class List {
         if (!fc.getList().isEmpty()) {
             System.out.printf("There are %d files ending with %s \n", total, this.file_extension);
             System.out.println(fc.getList());
+            Logger.getInstance().sendDataToLogger(1,"Search by file extension " + this.file_extension);
         }
     }
 }

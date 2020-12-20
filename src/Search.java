@@ -64,6 +64,7 @@ public class Search {
         if(!fc.getList().isEmpty()) {
             System.out.printf("There are %d files that contain the keyword %s \n", total, this.keyword);
             System.out.println(fc.getList());
+            Logger.getInstance().sendDataToLogger(1,"Search by keyword " + this.keyword);
         }
     }
 }
